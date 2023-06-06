@@ -2,23 +2,23 @@ package com.example.ResultRush.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.ColumnDefault;
 
 import java.time.Instant;
+import java.util.Set;
 
 @Entity
 @Data
-public class Target {
+public class Habit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer targetId;
+    private Integer habitId;
     @Basic(optional = false)
     private String title;
-    @Basic(optional = false)
-    private Boolean isCompleted;
+    private Set<DayOfWeek> appointedDays;
     @Basic(optional = false)
     private Instant createdUTC;
-    private Instant completedUTC;
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
-    @JoinColumn(name = "goal_id", referencedColumnName = "goalId")
-    private Goal goal;
+    @ColumnDefault("0")
+    @Basic(optional = false)
+    private Integer completedTimes;
 }

@@ -5,10 +5,12 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Category {
+public class Priority {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer categoryId;
+    private Integer priorityId;
     @Basic(optional = false)
     private String title;
+    @Basic(optional = false)
+    private String color;
 }
