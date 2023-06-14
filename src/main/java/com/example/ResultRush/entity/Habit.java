@@ -14,7 +14,7 @@ public class Habit {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer habitId;
     @Basic(optional = false)
-    private String title;
+    private String name;
     private Set<DayOfWeek> appointedDays;
     @Basic(optional = false)
     private Instant createdUTC;

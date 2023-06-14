@@ -10,7 +10,7 @@ public class Priority {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer priorityId;
     @Basic(optional = false)
-    private String title;
+    private String name;
     @Basic(optional = false)
     private String color;
 }

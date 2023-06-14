@@ -12,7 +12,7 @@ public class Target {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer targetId;
     @Basic(optional = false)
-    private String title;
+    private String name;
     @Basic(optional = false)
     private Boolean isCompleted;
     @Basic(optional = false)
